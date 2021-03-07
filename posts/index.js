@@ -5,7 +5,6 @@ const {randomBytes} = require('crypto');
 const app = express();
 app.use(bodyParser.json());
 
-// test
 const posts = {};
 
 app.get('/posts', (req, res) => {
