@@ -1,19 +1,6 @@
-import React, {useState, useEffect} from "react";
-import {GET} from "../services/http";
-import {ServicePort} from "../services/ports";
+import React from "react";
 
-export default ({postId}) => {
-    const [comments, setComments] = useState([]);
-
-    const fetchData = async () => {
-        const comments = await GET(ServicePort.COMMENTS, `posts/${postId}/comments`);
-        setComments(comments.data);
-    }
-
-    useEffect(() => {
-        fetchData();
-    }, []);
-
+export default ({ comments }) => {
     const renderedComments = comments.map(comment => {
         return (
             <li key={comment.id}>
