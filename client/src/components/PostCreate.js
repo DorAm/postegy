@@ -1,13 +1,12 @@
 import React, {useState} from 'react';
-import {post} from "./services/http";
-import {ServicePort} from "./services/ports";
+import {POST} from "../services/http";
+import {ServicePort} from "../services/ports";
 
 export default () => {
     const [title, setTitle] = useState('');
     const onSubmit = async (event) => {
-        debugger;
         event.preventDefault();
-        await post(ServicePort.POSTS, 'posts', {title})
+        await POST(ServicePort.POSTS, 'posts', {title})
         setTitle('')
     }
     return (
