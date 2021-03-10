@@ -36,6 +36,7 @@ app.post('/events', (req, res) => {
 });
 
 const PORT = 4000;
+const SERVICE_NAME = 'Posts Service';
 app.listen(PORT, () => {
-    console.log(`Listening on ${PORT}`)
-})
+    console.log(`${SERVICE_NAME} is listening on ${PORT}`)
+});

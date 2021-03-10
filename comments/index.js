@@ -39,6 +39,7 @@ app.post('/events', (req, res) => {
 });
 
 const PORT = 4001;
+const SERVICE_NAME = 'Comments Service';
 app.listen(PORT, () => {
-    console.log(`Listening on ${PORT}`)
-})
+    console.log(`${SERVICE_NAME} is listening on ${PORT}`)
+});
